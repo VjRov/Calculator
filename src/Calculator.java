@@ -1,7 +1,7 @@
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.TreeMap;
-//
+
 public class Calculator {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -45,7 +45,7 @@ public class Calculator {
         map.put(50,"Ⅼ");
         map.put(90,"ⅩⅭ");
         map.put(100,"Ⅽ");
-
+//comment for contribution
         do {
             roman.append(map.get(map.floorKey(arabicToRoman)));
             arabicToRoman -= map.floorKey(arabicToRoman);
@@ -77,6 +77,7 @@ public class Calculator {
                 throw new IOException();
             } catch (IOException e) {
                 System.out.println("throws Exception //т.к. строка не является математической операцией");
+                System.exit(0);
             }
         }
         if ((checkIfNumberIsArabic(str)) && ((checkIfNumberIsRoman(str)))) {
@@ -84,6 +85,7 @@ public class Calculator {
                 throw new IOException();
             } catch (IOException e) {
                 System.out.println("throws Exception //т.к. используются одновременно разные системы счисления");
+                System.exit(0);
             }
         }
         for (int i = 0; i < arrInput.length; i++) {
@@ -98,6 +100,7 @@ public class Calculator {
                     } catch (IOException e) {
                         //
                         System.out.println("throws Exception //т.к. ввод чисел меньше 0 или больше 10 запрещен");
+                        System.exit(0);
                     }
                 }
             }
@@ -108,6 +111,7 @@ public class Calculator {
                     //
                     System.out.println(
                             "throws Exception //т.к. формат математической операции не удовлетворяет заданию - два операнда и один оператор");
+                    System.exit(0);
                 }
             }
         }
