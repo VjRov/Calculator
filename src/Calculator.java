@@ -24,6 +24,7 @@ public class Calculator {
                     throw new IOException();
                 } catch (IOException e) {
                     System.out.println("throws Exception //т.к. в римской системе нет отрицательных чисел");
+                    System.exit(0);
                 }
             }
             System.out.println(arabicToRomanTranslation(arabicToRoman));
@@ -64,7 +65,7 @@ public class Calculator {
             return (firstValue * secondValue);
         if (operand.equals("/"))
             return firstValue / secondValue;
-        return 10000;
+        return 0;
     }
 
     public static void exceptionCheck(String str) {
