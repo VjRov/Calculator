@@ -38,13 +38,13 @@ public class Calculator {
 
         TreeMap<Integer,String> map = new TreeMap<>();
         map.put(1,"Ⅰ");
-        map.put(4,"ⅠV");
-        map.put(5,"V");
-        map.put(10,"X");
-        map.put(40,"XL");
-        map.put(50,"L");
-        map.put(90,"XC");
-        map.put(100,"C");
+        map.put(4,"Ⅳ");
+        map.put(5,"Ⅴ");
+        map.put(10,"Ⅹ");
+        map.put(40,"ⅩⅬ");
+        map.put(50,"Ⅼ");
+        map.put(90,"ⅩⅭ");
+        map.put(100,"Ⅽ");
 
         do {
             roman.append(map.get(map.floorKey(arabicToRoman)));
