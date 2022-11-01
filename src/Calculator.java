@@ -41,6 +41,7 @@ public class Calculator {
         map.put(1,"Ⅰ");
         map.put(4,"Ⅳ");
         map.put(5,"Ⅴ");
+        map.put(9,"ⅠⅩ" );
         map.put(10,"Ⅹ");
         map.put(40,"ⅩⅬ");
         map.put(50,"Ⅼ");
