@@ -5,8 +5,8 @@ import java.util.TreeMap;
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        String str = scan.nextLine();
-        System.out.println(calc(str));
+        String input = scan.nextLine();
+        System.out.println(calc(input));
     }
 
     public static String calc(String str){
