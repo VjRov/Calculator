@@ -2,7 +2,7 @@ import java.io.IOException;
 import java.util.Scanner;
 import java.util.TreeMap;
 
-public class Calculator {
+public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         String str = scan.nextLine();
@@ -69,6 +69,19 @@ public class Calculator {
         if (operand.equals("/"))
             return firstValue / secondValue;
         return 0;
+    }
+
+    enum RomanToArabic {
+        I(1),II(2),III(3),IV(4),V(5),VI(6),VII(7),VIII(8),IX(9),X(10);
+        private int arabic;
+        RomanToArabic(int arabic){
+            this.arabic = arabic;
+        }
+
+        public int getArabic(){
+            return this.arabic;
+        }
+
     }
 
     public static void exceptionCheck(String str) {
