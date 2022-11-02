@@ -1,9 +1,8 @@
 public enum RomanToArabic {
-    Ⅰ(1),Ⅱ(2),Ⅲ(3),Ⅳ(4),Ⅴ(5),Ⅵ(6),Ⅶ(7),Ⅷ(8),Ⅸ(9),Ⅹ(10);
+    I(1),II(2),III(3),IV(4),V(5),VI(6),VII(7),VIII(8),IX(9),X(10);
     private int arabic;
     RomanToArabic(int arabic){
         this.arabic = arabic;
-
     }
 
     public int getArabic(){

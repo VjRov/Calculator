@@ -38,15 +38,15 @@ public class Calculator {
         StringBuilder roman = new StringBuilder();
 
         TreeMap<Integer,String> map = new TreeMap<>();
-        map.put(1,"Ⅰ");
-        map.put(4,"Ⅳ");
-        map.put(5,"Ⅴ");
-        map.put(9,"ⅠⅩ" );
-        map.put(10,"Ⅹ");
-        map.put(40,"ⅩⅬ");
-        map.put(50,"Ⅼ");
-        map.put(90,"ⅩⅭ");
-        map.put(100,"Ⅽ");
+        map.put(1,"I");
+        map.put(4,"IV");
+        map.put(5,"V");
+        map.put(9,"IX" );
+        map.put(10,"X");
+        map.put(40,"XL");
+        map.put(50,"L");
+        map.put(90,"XC");
+        map.put(100,"C");
 //comment for contribution
         do {
             roman.append(map.get(map.floorKey(arabicToRoman)));
@@ -120,9 +120,9 @@ public class Calculator {
     }
 
     public static boolean checkIfNumberIsRoman(String str) {
-        return str.contains("Ⅰ") || str.contains("Ⅱ") || str.contains("Ⅲ") || str.contains("Ⅳ") || str.contains("Ⅴ")
-                || str.contains("Ⅵ") || str.contains("Ⅶ") || str.contains("Ⅷ") || str.contains("Ⅸ")
-                || str.contains("Ⅹ");
+        return str.contains("I") || str.contains("II") || str.contains("III") || str.contains("IV") || str.contains("V")
+                || str.contains("VI") || str.contains("VII") || str.contains("VIII") || str.contains("IX")
+                || str.contains("X");
     }
 
     public static boolean checkIfNumberIsArabic(String str) {
