@@ -6,12 +6,16 @@ public class Calculator {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         String str = scan.nextLine();
+        System.out.println(calc(str));
+    }
+
+    public static String calc(String str){
         exceptionCheck(str);
         if (checkIfNumberIsArabic(str)) {
             String[] arrInput = str.split(" ");
             int firstValue = Integer.parseInt(arrInput[0]);
             int secondValue = Integer.parseInt(arrInput[2]);
-            System.out.println(calculationReturnResult(firstValue, secondValue, arrInput[1]));
+            return Integer.toString(calculationReturnResult(firstValue, secondValue, arrInput[1]));
         }
 
         if (checkIfNumberIsRoman(str)) {
@@ -27,11 +31,9 @@ public class Calculator {
                     System.exit(0);
                 }
             }
-            System.out.println(arabicToRomanTranslation(arabicToRoman));
-
-
-
+            return arabicToRomanTranslation(arabicToRoman);
         }
+        return null;
     }
 
     public static String arabicToRomanTranslation(int arabicToRoman) {
