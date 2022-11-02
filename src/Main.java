@@ -56,7 +56,7 @@ public class Main {
         }while (arabicToRoman != 0);
 
 
-        return roman.toString();
+        return roman;
     }
 
     public static Integer calculationReturnResult(int firstValue, int secondValue, String operand) {
@@ -73,7 +73,7 @@ public class Main {
 
     enum RomanToArabic {
         I(1),II(2),III(3),IV(4),V(5),VI(6),VII(7),VIII(8),IX(9),X(10);
-        private int arabic;
+        final int arabic;
         RomanToArabic(int arabic){
             this.arabic = arabic;
         }
