@@ -9,17 +9,17 @@ public class Main {
         System.out.println(calc(input));
     }
 
-    public static String calc(String str){
-        exceptionCheck(str);
-        if (checkIfNumberIsArabic(str)) {
-            String[] arrInput = str.split(" ");
+    public static String calc(String input){
+        exceptionCheck(input);
+        if (checkIfNumberIsArabic(input)) {
+            String[] arrInput = input.split(" ");
             int firstValue = Integer.parseInt(arrInput[0]);
             int secondValue = Integer.parseInt(arrInput[2]);
             return Integer.toString(calculationReturnResult(firstValue, secondValue, arrInput[1]));
         }
 
-        if (checkIfNumberIsRoman(str)) {
-            String[] arrInput = str.split(" ");
+        if (checkIfNumberIsRoman(input)) {
+            String[] arrInput = input.split(" ");
             RomanToArabic roman1 = RomanToArabic.valueOf(arrInput[0]);
             RomanToArabic roman2 = RomanToArabic.valueOf(arrInput[2]);
             int arabicToRoman = calculationReturnResult(roman1.getArabic(), roman2.getArabic(), arrInput[1]);
