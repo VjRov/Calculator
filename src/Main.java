@@ -37,7 +37,7 @@ public class Main {
     }
 
     public static String arabicToRomanTranslation(int arabicToRoman) {
-        StringBuilder roman = new StringBuilder();
+        String roman = "";
 
         TreeMap<Integer,String> map = new TreeMap<>();
         map.put(1,"I");
@@ -51,7 +51,7 @@ public class Main {
         map.put(100,"C");
 //comment for contribution
         do {
-            roman.append(map.get(map.floorKey(arabicToRoman)));
+            roman += (map.get(map.floorKey(arabicToRoman)));
             arabicToRoman -= map.floorKey(arabicToRoman);
         }while (arabicToRoman != 0);
 
