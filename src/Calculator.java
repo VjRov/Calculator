@@ -19,7 +19,7 @@ public class Calculator {
             RomanToArabic roman1 = RomanToArabic.valueOf(arrInput[0]);
             RomanToArabic roman2 = RomanToArabic.valueOf(arrInput[2]);
             int arabicToRoman = calculationReturnResult(roman1.getArabic(), roman2.getArabic(), arrInput[1]);
-            if (arabicToRoman < 0){
+            if (arabicToRoman <= 0){
                 try {
                     throw new IOException();
                 } catch (IOException e) {
