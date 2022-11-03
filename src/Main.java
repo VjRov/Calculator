@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         String input = scan.nextLine();
+
         System.out.println(calc(input));
     }
 
@@ -107,7 +108,7 @@ public class Main {
         }
         for (int i = 0; i < arrInput.length; i++) {
             if ((arrInput[i].equals("+")) || (arrInput[i].equals("-")) || (arrInput[i].equals("/"))
-                    || (arrInput[i].equals("*")))  {
+                    || (arrInput[i].equals("*"))) {
                 operandFlag++;
             } else if (checkIfNumberIsArabic(str)) {
                 integerCheck = Integer.parseInt(arrInput[i]);
@@ -121,7 +122,8 @@ public class Main {
                     }
                 }
             }
-            if ((operandFlag > 1) || (arrInput.length != 3)) {
+        }
+            if ((operandFlag != 1) || (arrInput.length != 3)) {
                 try {
                     throw new IOException();
                 } catch (IOException e) {
@@ -132,7 +134,7 @@ public class Main {
                 }
             }
         }
-    }
+
 
     public static boolean checkIfNumberIsRoman(String str) {
         return str.contains("I") || str.contains("II") || str.contains("III") || str.contains("IV") || str.contains("V")
