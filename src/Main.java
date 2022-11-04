@@ -124,7 +124,9 @@ public class Main {
             }
         }
         for (int i = 0; i < arrInput.length; i++) {
-            if (checkIfNumberIsArabic(str)) {
+            if ((arrInput[i].equals("+")) || (arrInput[i].equals("-")) || (arrInput[i].equals("/"))
+                    || (arrInput[i].equals("*"))) {}
+            else if (checkIfNumberIsArabic(str)) {
                 integerCheck = Integer.parseInt(arrInput[i]);
                 if (integerCheck > 10 || integerCheck < 1) {
                     try {
